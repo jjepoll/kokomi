@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Game</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			background-image: url(location1.jpg);
+			background-size: cover;
+		}
+		.img1 {
+			width: 126px;
+			position: absolute;
+			margin-top: 306px;
+			margin-left: 828px;
+		}
+		.score {
+			background-color: #11307d;
+		}
+		.img2 {
+			width: 67px;
+			margin-left: 878px;
+			margin-top: 52px;
+			position: absolute;
+		}
+		@font-face {
+			font-family: kek;
+			src: url(etna-free-font.otf);
+		}
+		.img3 {
+			width: 295px;
+			margin-left: 942px;
+			margin-top: 47px;
+			position: absolute;
+		}
+		.img4 {
+			width: 200px;
+			margin-left: 1200px;
+			margin-top: 300px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div class="col-2 mx-auto text-center text-white score">
+		<h1 style="font-family: kek;">Мои очки <span class="bullet">0</span></h1>
+	</div>
+
+	<h1 class="text-white text1 score col-2" style="font-family: kek">Книга</h1>
+	<img src="book.jpg" class="img1">
+	<img src="vod.jpg" class="img3"> 
+	<h1 class="text-white text2 score col-2" style="font-family: kek">Фея </h1>
+	<img src="fairy.jpg" class="img2">
+	<h1 class="text-white text3 score col-2" style="font-family: kek">Водопад</h1>
+	
+
+<script type="text/javascript">
+	let ammo = 0;
+	document.querySelector('.img1').onclick = function() {
+		document.querySelector('.img1').style.display = "none"
+		ammo = ammo + 1;
+		document.querySelector('.bullet').innerHTML = ammo;
+		document.querySelector('.text1').style.textDecoration = "line-through"
+		alert('Ты нашел книгу!')
+	}
+	document.querySelector('.img2').onclick = function() {
+		document.querySelector('.img2').style.display = "none"
+		ammo = ammo + 1;
+		document.querySelector('.bullet').innerHTML = ammo;
+		document.querySelector('.text2').style.textDecoration = "line-through"
+		alert('Ты нашел фею!')
+	}
+	document.querySelector('.img3').onclick = function() {
+		document.querySelector('.img3').style.display = "none"
+		ammo = ammo + 1;
+		document.querySelector('.bullet').innerHTML = ammo;
+		document.querySelector('.text3').style.textDecoration = "line-through"
+		alert('Ты нашел водопад!')
+	}
+</script>
+</body>
+</html>
